@@ -1,0 +1,56 @@
+UnityAdsV2Plugin made by JWK
+
+This Plugin is cordova plugin of UnityAds version 2.0.2
+build 2016-08-27
+
+[LICENSE]
+empty
+
+[USE]
+cordova plugin add UnityadsV2Plugin
+
+[API]
+
+function setOnResume(function onResumeCallback);
+UnityadsV2PluginJwk.setOnResume(function(){
+  //call by onResume of Plugin
+});
+
+function setOnUnityAdsStart(function onUnityAdsStartCallback);
+UnityadsV2PluginJwk.setOnUnityAdsStart(function(){
+  //call by onUnityAdsStart of Plugin
+});
+
+function setOnUnityAdsFinish(function onUnityAdsFinishCallback);
+UnityadsV2PluginJwk.setOnUnityAdsFinish(function(){
+  //call by onUnityAdsFinish of Plugin
+});
+
+function setOnUnityAdsError(function onUnityAdsErrorCallback);
+UnityadsV2PluginJwk.setOnUnityAdsError(function(){
+  //call by onUnityAdsError of Plugin
+});
+
+function setUp(String gameId,boolean testMode);
+UnityadsV2PluginJwk.setUp("123456",false);
+
+function isSetUp(function callback);
+UnityadsV2PluginJwk.isSetUp(function(result){
+  alert(result);//result is true or false
+});
+
+function isReadyVideo(function callback);
+UnityadsV2PluginJwk.isReadyVideo(function(result){
+  alert(result);//result is true or false
+});
+
+function showVideo();
+UnityadsV2PluginJwk.showVideo();
+
+function isReadyRewardVideo(function callback);
+UnityadsV2PluginJwk.isReadyRewardVideo(function(result){
+  alert(result);//result is true or false
+});
+
+function showRewardVideo();
+UnityadsV2PluginJwk.showRewardVideo();

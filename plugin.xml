@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="com.jwk.unityadsv2" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>UnityadsV2PluginJwk</name>
+    <js-module name="UnityadsV2PluginJwk" src="www/UnityadsV2PluginJwk.js">
+        <clobbers target="UnityadsV2PluginJwk" />
+    </js-module>
+    <platform name="android">
+        <config-file target="config.xml" parent="/*">
+            <feature name="UnityadsV2Plugin">
+                <param name="android-package"
+                  value="com.jwk.unityadsv2.UnityadsV2Plugin"/>
+            </feature>
+        </config-file>
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.INTERNET" />
+            <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+        </config-file>
+
+        <source-file src="src/android/com/jwk/unityadsv2/UnityadsV2Plugin.java"
+            target-dir="src/com/jwk/unityadsv2"/>
+
+        <framework src="src/android/unityadsv2.gradle" custom="true" type="gradleReference" />
+
+        <resource-file src="unity-ads/unity-ads.aar" target="libs/unity-ads.aar" />
+    </platform>
+</plugin>
